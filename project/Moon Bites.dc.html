@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  body { margin:0; background:#0E1318; color:#14181C; font-family:'Inter',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#A9714B; text-decoration:none; }
+  a:hover { color:#8C5B39; }
+  details > summary { list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker { display:none; }
+  @keyframes mb-zoom { from { transform:scale(1.14); } to { transform:scale(1); } }
+  @keyframes mb-word { from { opacity:0; transform:translateY(0.4em) rotate(1.5deg); } to { opacity:1; transform:none; } }
+  @keyframes mb-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+  @keyframes mb-bob { 0%,100% { transform:translateY(0); } 50% { transform:translateY(7px); } }
+  ::selection { background:#A9714B; color:#fff; }
+  .mb-scroll::-webkit-scrollbar { height:6px; }
+  .mb-scroll::-webkit-scrollbar-thumb { background:rgba(255,255,255,0.2); border-radius:99px; }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#0E1318"></rect><circle cx="200" cy="140" r="52" fill="none" stroke="#E6B78F" stroke-width="6"></circle><path d="M214 108a44 44 0 1 0 0 64 34 34 0 0 1 0-64z" fill="#E6B78F"></path><text x="200" y="228" text-anchor="middle" font-family="Geist, sans-serif" font-size="26" fill="#FAF8F4" letter-spacing="4">MOON BITES</text></svg></template>
+
+<div style="width:100%;overflow-x:hidden;background:#FAF8F4">
+
+<header data-nav="" style="position:fixed;top:0;left:0;right:0;z-index:80;transition:background 400ms cubic-bezier(0.22,1,0.36,1),border-color 400ms,backdrop-filter 400ms;border-bottom:1px solid rgba(255,255,255,0)">
+  <div style="max-width:1320px;margin:0 auto;padding:0 28px;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <a href="#top" style="display:flex;align-items:center;padding:12px 0">
+      <span data-navplate="" style="display:inline-flex;align-items:center;background:#FAF8F4;border:1px solid rgba(255,255,255,0.35);border-radius:12px;padding:9px 16px;box-shadow:0 8px 24px -12px rgba(0,0,0,0.5);transition:all 400ms cubic-bezier(0.22,1,0.36,1)">
+        <svg width="150" height="36" viewBox="0 0 300 72" role="img" aria-label="Moon Bites — Grace Moments" style="display:block">
+          <g fill="none" stroke="#A9714B" stroke-width="3.2" stroke-linecap="round">
+            <path d="M44 12a26 26 0 1 0 0 48 20 20 0 0 1 0-48z"></path>
+            <ellipse cx="46" cy="40" rx="17" ry="6"></ellipse>
+            <path d="M29 40v7c0 3.3 7.6 6 17 6s17-2.7 17-6v-7"></path>
+            <path d="M52 18l1.6 4.2L58 24l-4.4 1.8L52 30l-1.6-4.2L46 24l4.4-1.8z" stroke-width="2.2"></path>
+          </g>
+          <text x="86" y="32" font-family="Geist, sans-serif" font-size="25" font-weight="500" letter-spacing="5" fill="#14181C">MOON</text>
+          <text x="86" y="57" font-family="Geist, sans-serif" font-size="25" font-weight="500" letter-spacing="5" fill="#14181C">BITES</text>
+          <text x="200" y="57" font-family="Geist, sans-serif" font-size="11" font-style="italic" letter-spacing="1" fill="#A9714B">Grace Moments</text>
+        </svg>
+      </span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:30px;flex-wrap:wrap;padding-bottom:6px">
+      <a data-navlink="" href="#experience" style="font-family:'Geist',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.72);transition:color 300ms" style-hover="color:#fff">The cart</a>
+      <a data-navlink="" href="#build" style="font-family:'Geist',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.72);transition:color 300ms" style-hover="color:#fff">Build a bite</a>
+      <a data-navlink="" href="#occasions" style="font-family:'Geist',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.72);transition:color 300ms" style-hover="color:#fff">Occasions</a>
+      <a data-navlink="" href="#gallery" style="font-family:'Geist',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.72);transition:color 300ms" style-hover="color:#fff">Gallery</a>
+      <a href="#book" style="display:inline-flex;align-items:center;gap:9px;background:#A9714B;color:#fff;font-family:'Geist',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:13px 22px;border-radius:999px;transition:all 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#8C5B39;color:#fff;transform:translateY(-1px)">Book the cart
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<div style="position:fixed;right:20px;bottom:20px;z-index:90;display:flex;flex-direction:column;align-items:flex-end;gap:10px">
+  <a href="sms:+10000000000" style="display:inline-flex;align-items:center;gap:8px;background:rgba(14,19,24,0.86);backdrop-filter:blur(8px);color:#fff;font-family:'Geist',sans-serif;font-size:13px;font-weight:600;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,0.18);transition:all 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#14181C;color:#fff;transform:translateY(-2px)">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.3A8 8 0 1 1 21 12z"></path></svg>
+    Text us
+  </a>
+  <a href="https://wa.me/10000000000" style="display:inline-flex;align-items:center;gap:9px;background:#A9714B;color:#fff;font-family:'Geist',sans-serif;font-size:14px;font-weight:600;padding:14px 20px;border-radius:999px;box-shadow:0 14px 34px -12px rgba(0,0,0,0.6);transition:all 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#8C5B39;color:#fff;transform:translateY(-2px)">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.2-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>
+    WhatsApp
+  </a>
+</div>
+
+<section id="top" style="position:relative;height:100vh;min-height:620px;overflow:hidden;background:#0E1318">
+  <div data-parallax="0.28" style="position:absolute;inset:-12% 0 -12% 0;will-change:transform">
+    <img src="assets/IMG_9541.jpg" alt="Moon Bites cart by the pool at night" style="width:100%;height:100%;object-fit:cover;animation:mb-zoom 2600ms cubic-bezier(0.22,1,0.36,1) both" />
+  </div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,19,24,0.72) 0%,rgba(14,19,24,0.32) 38%,rgba(14,19,24,0.86) 100%)"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 42%,rgba(169,113,75,0.18),transparent 70%)"></div>
+  <div style="position:relative;height:100%;max-width:1320px;margin:0 auto;padding:0 28px;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:9vh;color:#fff">
+    <p style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin:0 0 30px;opacity:0;animation:mb-word 900ms cubic-bezier(0.22,1,0.36,1) 200ms both">Dutch mini pancakes · Live cart · Texas</p>
+    <h1 style="font-family:'Geist',sans-serif;font-size:clamp(44px,8.4vw,116px);font-weight:300;letter-spacing:-0.035em;line-height:0.94;margin:0 0 30px;max-width:14ch">
+      <span style="display:inline-block;opacity:0;animation:mb-word 1000ms cubic-bezier(0.22,1,0.36,1) 320ms both">Fifty</span>
+      <span style="display:inline-block;opacity:0;animation:mb-word 1000ms cubic-bezier(0.22,1,0.36,1) 420ms both">little</span>
+      <span style="display:inline-block;opacity:0;animation:mb-word 1000ms cubic-bezier(0.22,1,0.36,1) 520ms both;font-style:italic;font-weight:400;color:#E6B78F">pancakes</span>
+      <span style="display:inline-block;opacity:0;animation:mb-word 1000ms cubic-bezier(0.22,1,0.36,1) 620ms both">at</span>
+      <span style="display:inline-block;opacity:0;animation:mb-word 1000ms cubic-bezier(0.22,1,0.36,1) 700ms both">a</span>
+      <span style="display:inline-block;opacity:0;animation:mb-word 1000ms cubic-bezier(0.22,1,0.36,1) 780ms both">time.</span>
+    </h1>
+    <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-end;justify-content:space-between">
+      <p style="font-size:17px;line-height:1.6;color:rgba(255,255,255,0.78);margin:0;max-width:44ch;opacity:0;animation:mb-word 1000ms cubic-bezier(0.22,1,0.36,1) 880ms both;text-wrap:pretty">We roll our cart into your party and cook poffertjes in front of your guests — hot, fluffy, topped to order. The dessert nobody photographs later, because they eat it first.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;opacity:0;animation:mb-word 1000ms cubic-bezier(0.22,1,0.36,1) 980ms both">
+        <a href="#book" style="display:inline-flex;align-items:center;gap:10px;background:#FAF8F4;color:#14181C;font-family:'Geist',sans-serif;font-size:15px;font-weight:600;padding:16px 28px;border-radius:999px;transition:all 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#fff;color:#14181C;transform:translateY(-2px)">Check your date
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+        <a href="#build" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,0.28);color:#fff;font-family:'Geist',sans-serif;font-size:15px;font-weight:600;padding:16px 28px;border-radius:999px;transition:all 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="border-color:#fff;background:rgba(255,255,255,0.08);color:#fff">Build your bite</a>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,0.5);animation:mb-bob 2600ms ease-in-out infinite">
+    <span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase">Scroll</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M6 13l6 6 6-6"></path></svg>
+  </div>
+</section>
+
+<div style="background:#0E1318;color:#fff;padding:20px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div style="display:flex;width:max-content;animation:mb-marquee 38s linear infinite;gap:0">
+    <div style="display:flex;align-items:center;gap:44px;padding-right:44px;font-family:'Geist',sans-serif;font-size:15px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.62);white-space:nowrap">
+      <span>Fresh strawberries</span><span style="color:#A9714B">✦</span><span>Nutella</span><span style="color:#A9714B">✦</span><span>Bananas</span><span style="color:#A9714B">✦</span><span>Oreo crumble</span><span style="color:#A9714B">✦</span><span>Salted caramel</span><span style="color:#A9714B">✦</span><span>Whipped cream</span><span style="color:#A9714B">✦</span><span>Cinnamon crunch</span><span style="color:#A9714B">✦</span><span>Powdered sugar</span><span style="color:#A9714B">✦</span><span>Sugar pearls</span><span style="color:#A9714B">✦</span><span>Condensed milk</span><span style="color:#A9714B">✦</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:44px;padding-right:44px;font-family:'Geist',sans-serif;font-size:15px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.62);white-space:nowrap">
+      <span>Fresh strawberries</span><span style="color:#A9714B">✦</span><span>Nutella</span><span style="color:#A9714B">✦</span><span>Bananas</span><span style="color:#A9714B">✦</span><span>Oreo crumble</span><span style="color:#A9714B">✦</span><span>Salted caramel</span><span style="color:#A9714B">✦</span><span>Whipped cream</span><span style="color:#A9714B">✦</span><span>Cinnamon crunch</span><span style="color:#A9714B">✦</span><span>Powdered sugar</span><span style="color:#A9714B">✦</span><span>Sugar pearls</span><span style="color:#A9714B">✦</span><span>Condensed milk</span><span style="color:#A9714B">✦</span>
+    </div>
+  </div>
+</div>
+
+<section style="background:#FAF8F4;padding:clamp(80px,11vw,150px) 28px">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,6vw,90px);align-items:center">
+    <div data-reveal="0">
+      <p style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#A9714B;margin:0 0 26px">Grace moments</p>
+      <h2 style="font-family:'Geist',sans-serif;font-size:clamp(30px,4.2vw,54px);font-weight:300;letter-spacing:-0.03em;line-height:1.08;margin:0 0 26px;max-width:17ch;text-wrap:pretty">A dessert that happens <em style="font-style:italic;color:#A9714B">in front of people</em>, not behind a kitchen door.</h2>
+      <p style="font-size:17px;line-height:1.7;color:#55524D;margin:0 0 20px;max-width:52ch;text-wrap:pretty">Poffertjes are Dutch mini pancakes: fifty of them puff up at once on a copper-dimpled griddle, get flipped with a skewer, and go straight into a warm box with whatever the guest points at.</p>
+      <p style="font-size:17px;line-height:1.7;color:#55524D;margin:0 0 34px;max-width:52ch;text-wrap:pretty">It smells like a home kitchen, it moves like a bar, and it turns a corner of your party into the place everyone stands.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:#E3DED5;border:1px solid #E3DED5;border-radius:14px;overflow:hidden">
+        <div style="background:#FAF8F4;padding:22px 20px">
+          <p data-count="200" style="font-family:'Geist',sans-serif;font-size:30px;font-weight:400;letter-spacing:-0.02em;margin:0 0 4px;color:#14181C">200</p>
+          <p style="font-size:12px;line-height:1.5;color:#7A756D;margin:0">servings per hour</p>
+        </div>
+        <div style="background:#FAF8F4;padding:22px 20px">
+          <p data-count="50" style="font-family:'Geist',sans-serif;font-size:30px;font-weight:400;letter-spacing:-0.02em;margin:0 0 4px;color:#14181C">50</p>
+          <p style="font-size:12px;line-height:1.5;color:#7A756D;margin:0">pancakes per griddle</p>
+        </div>
+        <div style="background:#FAF8F4;padding:22px 20px">
+          <p data-count="12" style="font-family:'Geist',sans-serif;font-size:30px;font-weight:400;letter-spacing:-0.02em;margin:0 0 4px;color:#14181C">12</p>
+          <p style="font-size:12px;line-height:1.5;color:#7A756D;margin:0">toppings on the bar</p>
+        </div>
+        <div style="background:#FAF8F4;padding:22px 20px">
+          <p style="font-family:'Geist',sans-serif;font-size:30px;font-weight:400;letter-spacing:-0.02em;margin:0 0 4px;color:#14181C">90<span style="font-size:18px">min</span></p>
+          <p style="font-size:12px;line-height:1.5;color:#7A756D;margin:0">on site before you start</p>
+        </div>
+      </div>
+    </div>
+    <div data-reveal="1" style="position:relative">
+      <div style="aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:#0E1318">
+        <img data-parallax="0.08" src="assets/IMG_9536.jpg" alt="Guests holding boxes of mini pancakes" style="width:100%;height:114%;object-fit:cover;margin-top:-7%;will-change:transform" />
+      </div>
+      <div style="position:absolute;left:-18px;bottom:-26px;width:min(56%,240px);aspect-ratio:1;border-radius:14px;overflow:hidden;border:8px solid #FAF8F4;background:#0E1318">
+        <img src="assets/IMG_4594.jpg" alt="Serving a fresh box of mini pancakes" style="width:100%;height:100%;object-fit:cover" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:#0E1318;color:#fff;padding:clamp(80px,11vw,140px) 28px">
+  <div style="max-width:1320px;margin:0 auto">
+    <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end;margin-bottom:clamp(40px,6vw,72px)">
+      <h2 style="font-family:'Geist',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:300;letter-spacing:-0.03em;line-height:1.08;margin:0;max-width:18ch;text-wrap:pretty">How an hour with the cart <em style="font-style:italic;color:#E6B78F">actually goes</em></h2>
+      <p style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0">The service</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,72px);align-items:start">
+      <div style="position:sticky;top:110px;aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:#000">
+        <img src="assets/IMG_5162.jpg" alt="The Moon Bites cart set up poolside" style="width:100%;height:100%;object-fit:cover" />
+        <div style="position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(180deg,transparent,rgba(14,19,24,0.9))"></div>
+        <p style="position:absolute;left:24px;right:24px;bottom:22px;font-family:'Geist',sans-serif;font-size:15px;font-weight:400;color:rgba(255,255,255,0.85);margin:0">The cart arrives folded, set up and lit within 45 minutes.</p>
+      </div>
+      <div>
+        <div data-reveal="0" style="border-top:1px solid rgba(255,255,255,0.14);padding:30px 0;display:grid;grid-template-columns:52px 1fr;gap:18px">
+          <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#E6B78F">01</span>
+          <div>
+            <h3 style="font-family:'Geist',sans-serif;font-size:21px;font-weight:500;letter-spacing:-0.015em;margin:0 0 10px">We arrive 90 minutes early</h3>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.6);margin:0;max-width:48ch">Cart, umbrella, warm lights, toppings bar and griddle. You don't lift anything and we need one standard outlet.</p>
+          </div>
+        </div>
+        <div data-reveal="1" style="border-top:1px solid rgba(255,255,255,0.14);padding:30px 0;display:grid;grid-template-columns:52px 1fr;gap:18px">
+          <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#E6B78F">02</span>
+          <div>
+            <h3 style="font-family:'Geist',sans-serif;font-size:21px;font-weight:500;letter-spacing:-0.015em;margin:0 0 10px">Batter goes down at your cue</h3>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.6);margin:0;max-width:48ch">Fifty pancakes rise at once. Nothing is pre-cooked, nothing sits under a heat lamp, and the smell does the inviting.</p>
+          </div>
+        </div>
+        <div data-reveal="2" style="border-top:1px solid rgba(255,255,255,0.14);padding:30px 0;display:grid;grid-template-columns:52px 1fr;gap:18px">
+          <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#E6B78F">03</span>
+          <div>
+            <h3 style="font-family:'Geist',sans-serif;font-size:21px;font-weight:500;letter-spacing:-0.015em;margin:0 0 10px">Every guest builds their own box</h3>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.6);margin:0;max-width:48ch">Twelve toppings, three drizzles, as many combinations as there are kids in the line. Kids come back three times — plan for it.</p>
+          </div>
+        </div>
+        <div data-reveal="3" style="border-top:1px solid rgba(255,255,255,0.14);border-bottom:1px solid rgba(255,255,255,0.14);padding:30px 0;display:grid;grid-template-columns:52px 1fr;gap:18px">
+          <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#E6B78F">04</span>
+          <div>
+            <h3 style="font-family:'Geist',sans-serif;font-size:21px;font-weight:500;letter-spacing:-0.015em;margin:0 0 10px">We leave the corner cleaner than we found it</h3>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.6);margin:0;max-width:48ch">Griddle off, cart wiped, trash bagged and out. The only thing left behind is the smell of vanilla.</p>
+          </div>
+        </div>
+        <a data-reveal="4" href="#book" style="display:inline-flex;align-items:center;gap:10px;margin-top:36px;color:#E6B78F;font-family:'Geist',sans-serif;font-size:16px;font-weight:600" style-hover="color:#fff">Ask about your venue
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="build" style="background:#14181C;color:#fff;padding:clamp(80px,11vw,140px) 28px;position:relative;overflow:hidden">
+  <div style="position:absolute;top:-200px;left:-120px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(169,113,75,0.22),transparent 68%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1320px;margin:0 auto">
+    <div data-reveal="0" style="text-align:center;margin-bottom:clamp(40px,6vw,64px)">
+      <p style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#E6B78F;margin:0 0 22px">The toppings bar</p>
+      <h2 style="font-family:'Geist',sans-serif;font-size:clamp(28px,4.2vw,52px);font-weight:300;letter-spacing:-0.03em;line-height:1.08;margin:0 auto 18px;max-width:16ch;text-wrap:balance">Build the box you'd order</h2>
+      <p style="font-size:16px;line-height:1.65;color:rgba(255,255,255,0.6);margin:0 auto;max-width:48ch">Pick a base, up to four toppings and a drizzle. Send it with your request and we'll load the cart for it.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,56px);align-items:start">
+      <div data-reveal="1">
+        <p style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin:0 0 16px">01 — Base</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px">
+          <sc-for list="{{ bases }}" as="b" hint-placeholder-count="3">
+            <button onClick="{{ b.pick }}" style="{{ b.style }}">{{ b.label }}</button>
+          </sc-for>
+        </div>
+        <p style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin:0 0 16px">02 — Toppings <span style="color:#E6B78F">{{ toppingCount }}</span></p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px">
+          <sc-for list="{{ toppings }}" as="t" hint-placeholder-count="10">
+            <button onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button>
+          </sc-for>
+        </div>
+        <p style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin:0 0 16px">03 — Drizzle</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <sc-for list="{{ drizzles }}" as="d" hint-placeholder-count="4">
+            <button onClick="{{ d.pick }}" style="{{ d.style }}">{{ d.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div data-reveal="2" style="border:1px solid rgba(255,255,255,0.14);border-radius:18px;overflow:hidden;background:rgba(255,255,255,0.03)">
+        <div style="position:relative;aspect-ratio:16/11;background:#000">
+          <img src="assets/IMG_9531.jpg" alt="Two boxes of topped mini pancakes" style="width:100%;height:100%;object-fit:cover;opacity:0.82" />
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,24,28,0.92))"></div>
+          <p style="position:absolute;left:26px;bottom:20px;right:26px;font-family:'Geist',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:400;letter-spacing:-0.02em;line-height:1.2;margin:0">{{ orderTitle }}</p>
+        </div>
+        <div style="padding:26px 26px 30px">
+          <p style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin:0 0 14px">Your box</p>
+          <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.86);margin:0 0 24px;min-height:3.4em">{{ orderLine }}</p>
+          <button onClick="{{ addToRequest }}" style="width:100%;background:#E6B78F;color:#14181C;border:none;border-radius:999px;padding:15px 22px;font-family:'Geist',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#fff">{{ addLabel }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="occasions" style="background:#FAF8F4;padding:clamp(80px,11vw,150px) 28px">
+  <div style="max-width:1320px;margin:0 auto">
+    <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end;margin-bottom:clamp(36px,5vw,64px)">
+      <h2 style="font-family:'Geist',sans-serif;font-size:clamp(28px,4.2vw,52px);font-weight:300;letter-spacing:-0.03em;line-height:1.08;margin:0;max-width:16ch;text-wrap:pretty">Where the cart <em style="font-style:italic;color:#A9714B">shows up</em></h2>
+      <p style="font-size:15px;line-height:1.6;color:#7A756D;margin:0;max-width:34ch">From 30 guests. Backyards, clubhouses, ballrooms, school gyms and pool decks across Texas.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
+      <article data-reveal="0" style="position:relative;border-radius:16px;overflow:hidden;background:#0E1318;aspect-ratio:3/4;transition:transform 400ms cubic-bezier(0.22,1,0.36,1)" style-hover="transform:translateY(-6px)">
+        <img src="assets/IMG_9552.jpg" alt="Kids' party by the pool" style="width:100%;height:100%;object-fit:cover;opacity:0.86;transition:transform 900ms cubic-bezier(0.22,1,0.36,1)" style-hover="transform:scale(1.06)" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(14,19,24,0.88));pointer-events:none"></div>
+        <div style="position:absolute;left:22px;right:22px;bottom:20px;color:#fff;pointer-events:none">
+          <h3 style="font-family:'Geist',sans-serif;font-size:20px;font-weight:500;letter-spacing:-0.015em;margin:0 0 6px">Kids' birthdays</h3>
+          <p style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.72);margin:0">Sprinkles, pearls and a line that keeps reforming.</p>
+        </div>
+      </article>
+      <article data-reveal="1" style="position:relative;border-radius:16px;overflow:hidden;background:#0E1318;aspect-ratio:3/4;transition:transform 400ms cubic-bezier(0.22,1,0.36,1)" style-hover="transform:translateY(-6px)">
+        <img src="assets/IMG_5174.jpg" alt="Cart at an apartment community event" style="width:100%;height:100%;object-fit:cover;opacity:0.86;transition:transform 900ms cubic-bezier(0.22,1,0.36,1)" style-hover="transform:scale(1.06)" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(14,19,24,0.88));pointer-events:none"></div>
+        <div style="position:absolute;left:22px;right:22px;bottom:20px;color:#fff;pointer-events:none">
+          <h3 style="font-family:'Geist',sans-serif;font-size:20px;font-weight:500;letter-spacing:-0.015em;margin:0 0 6px">Corporate &amp; resident events</h3>
+          <p style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.72);margin:0">Invoiced, insured, and done in one clean hour.</p>
+        </div>
+      </article>
+      <article data-reveal="2" style="position:relative;border-radius:16px;overflow:hidden;background:#0E1318;aspect-ratio:3/4;transition:transform 400ms cubic-bezier(0.22,1,0.36,1)" style-hover="transform:translateY(-6px)">
+        <img src="assets/IMG_5148.jpg" alt="Toppings bar on the cart" style="width:100%;height:100%;object-fit:cover;opacity:0.86;transition:transform 900ms cubic-bezier(0.22,1,0.36,1)" style-hover="transform:scale(1.06)" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(14,19,24,0.88));pointer-events:none"></div>
+        <div style="position:absolute;left:22px;right:22px;bottom:20px;color:#fff;pointer-events:none">
+          <h3 style="font-family:'Geist',sans-serif;font-size:20px;font-weight:500;letter-spacing:-0.015em;margin:0 0 6px">Baptisms &amp; baby showers</h3>
+          <p style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.72);margin:0">Soft palettes, small boxes, quiet service.</p>
+        </div>
+      </article>
+      <article data-reveal="3" style="position:relative;border-radius:16px;overflow:hidden;background:#0E1318;aspect-ratio:3/4;transition:transform 400ms cubic-bezier(0.22,1,0.36,1)" style-hover="transform:translateY(-6px)">
+        <img src="assets/IMG_9540.jpg" alt="Evening event with the cart" style="width:100%;height:100%;object-fit:cover;opacity:0.86;transition:transform 900ms cubic-bezier(0.22,1,0.36,1)" style-hover="transform:scale(1.06)" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(14,19,24,0.88));pointer-events:none"></div>
+        <div style="position:absolute;left:22px;right:22px;bottom:20px;color:#fff;pointer-events:none">
+          <h3 style="font-family:'Geist',sans-serif;font-size:20px;font-weight:500;letter-spacing:-0.015em;margin:0 0 6px">Weddings &amp; quinces</h3>
+          <p style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.72);margin:0">Late-night dessert, served warm at 11pm.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:#0E1318;color:#fff;padding:clamp(80px,11vw,140px) 0">
+  <div data-reveal="0" style="max-width:1320px;margin:0 auto;padding:0 28px clamp(32px,4vw,52px);display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:baseline">
+    <h2 style="font-family:'Geist',sans-serif;font-size:clamp(26px,3.6vw,44px);font-weight:300;letter-spacing:-0.03em;margin:0">Nights we rolled up</h2>
+    <p style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin:0">Drag to explore →</p>
+  </div>
+  <div class="mb-scroll" style="display:flex;gap:16px;overflow-x:auto;padding:0 28px 22px;scroll-snap-type:x mandatory">
+    <div style="flex:0 0 min(78vw,440px);aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#000;scroll-snap-align:center"><img src="assets/IMG_9539.jpg" alt="Moon Bites event" style="width:100%;height:100%;object-fit:cover" /></div>
+    <div style="flex:0 0 min(78vw,440px);aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#000;scroll-snap-align:center"><img src="assets/IMG_5142.jpg" alt="Moon Bites event" style="width:100%;height:100%;object-fit:cover" /></div>
+    <div style="flex:0 0 min(78vw,440px);aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#000;scroll-snap-align:center"><img src="assets/IMG_9544.jpg" alt="Moon Bites event" style="width:100%;height:100%;object-fit:cover" /></div>
+    <div style="flex:0 0 min(78vw,440px);aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#000;scroll-snap-align:center"><img src="assets/IMG_5167.jpg" alt="Moon Bites event" style="width:100%;height:100%;object-fit:cover" /></div>
+    <div style="flex:0 0 min(78vw,440px);aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#000;scroll-snap-align:center"><img src="assets/IMG_9547.jpg" alt="Moon Bites event" style="width:100%;height:100%;object-fit:cover" /></div>
+    <div style="flex:0 0 min(78vw,440px);aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#000;scroll-snap-align:center"><img src="assets/IMG_5177.jpg" alt="Moon Bites event" style="width:100%;height:100%;object-fit:cover" /></div>
+  </div>
+</section>
+
+<section style="background:#FAF8F4;padding:clamp(80px,11vw,140px) 28px">
+  <div style="max-width:1100px;margin:0 auto">
+    <figure data-reveal="0" style="margin:0 0 clamp(40px,6vw,72px);text-align:center">
+      <blockquote style="font-family:'Geist',sans-serif;font-size:clamp(24px,3.6vw,42px);font-weight:300;letter-spacing:-0.025em;line-height:1.25;margin:0 0 26px;text-wrap:balance">"They set up by the pool at eight and the line didn't stop until the batter ran out. My neighbors are still asking who catered it."</blockquote>
+      <figcaption style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#7A756D">Resident event · Huntsville, TX</figcaption>
+    </figure>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:#E3DED5;border-top:1px solid #E3DED5;border-bottom:1px solid #E3DED5">
+      <div data-reveal="0" style="background:#FAF8F4;padding:30px 24px 30px 0">
+        <p style="font-size:15px;line-height:1.7;color:#3A3835;margin:0 0 14px">"My daughter asked for the pancake cart instead of a cake. Best decision of the whole party."</p>
+        <p style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#7A756D;margin:0">Birthday · Conroe</p>
+      </div>
+      <div data-reveal="1" style="background:#FAF8F4;padding:30px 24px">
+        <p style="font-size:15px;line-height:1.7;color:#3A3835;margin:0 0 14px">"Warm, personal, and genuinely delicious. They treated our guests like family the whole night."</p>
+        <p style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#7A756D;margin:0">Baptism · The Woodlands</p>
+      </div>
+      <div data-reveal="2" style="background:#FAF8F4;padding:30px 0 30px 24px">
+        <p style="font-size:15px;line-height:1.7;color:#3A3835;margin:0 0 14px">"Clean quote, on time, zero mess left behind. We've booked them three times now."</p>
+        <p style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#7A756D;margin:0">Community manager · Houston</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" style="position:relative;background:#0E1318;color:#fff;padding:clamp(80px,11vw,140px) 28px;overflow:hidden">
+  <div style="position:absolute;inset:0;opacity:0.22">
+    <img data-parallax="0.12" src="assets/IMG_5170.jpg" alt="" style="width:100%;height:118%;object-fit:cover;margin-top:-9%;will-change:transform" />
+  </div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,19,24,0.9),rgba(14,19,24,0.97))"></div>
+  <div style="position:relative;max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:clamp(36px,6vw,80px);align-items:start">
+    <div data-reveal="0">
+      <p style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#E6B78F;margin:0 0 24px">Check your date</p>
+      <h2 style="font-family:'Geist',sans-serif;font-size:clamp(30px,4.4vw,54px);font-weight:300;letter-spacing:-0.03em;line-height:1.06;margin:0 0 22px;max-width:14ch;text-wrap:pretty">Tell us the date. We'll bring the griddle.</h2>
+      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.65);margin:0 0 36px;max-width:46ch">Written quote within 24 hours, tailored to your guest count and venue. Nothing to pay until you approve it.</p>
+      <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:38px">
+        <a href="https://wa.me/10000000000" style="display:inline-flex;align-items:center;gap:12px;width:fit-content;border:1px solid rgba(255,255,255,0.22);color:#fff;font-family:'Geist',sans-serif;font-size:15px;font-weight:600;padding:14px 24px;border-radius:999px;transition:all 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="border-color:#E6B78F;background:rgba(230,183,143,0.1);color:#fff">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.2-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>
+          WhatsApp us
+        </a>
+        <a href="mailto:hello@bitesworld.net" style="display:inline-flex;align-items:center;gap:12px;color:rgba(255,255,255,0.6);font-size:15px" style-hover="color:#fff">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18v12H3zM3 7l9 6 9-6"></path></svg>
+          hello@bitesworld.net
+        </a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.16);border-radius:999px;padding:8px 15px">Statewide in Texas</span>
+        <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.16);border-radius:999px;padding:8px 15px">From 30 guests</span>
+        <span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.16);border-radius:999px;padding:8px 15px">Licensed &amp; insured</span>
+      </div>
+    </div>
+    <form data-reveal="1" onSubmit="{{ onSubmit }}" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:20px;padding:clamp(24px,3vw,34px);display:grid;gap:18px;backdrop-filter:blur(10px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px">
+        <label style="display:grid;gap:8px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Name
+          <input type="text" placeholder="Your name" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:13px 14px;color:#fff;font-family:'Inter',sans-serif;font-size:15px;letter-spacing:0;text-transform:none;outline:none;transition:border-color 200ms" style-focus="border-color:#E6B78F" />
+        </label>
+        <label style="display:grid;gap:8px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Email
+          <input type="email" placeholder="you@email.com" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:13px 14px;color:#fff;font-family:'Inter',sans-serif;font-size:15px;letter-spacing:0;text-transform:none;outline:none;transition:border-color 200ms" style-focus="border-color:#E6B78F" />
+        </label>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:18px">
+        <label style="display:grid;gap:8px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Event date
+          <input type="date" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:13px 14px;color:#fff;font-family:'Inter',sans-serif;font-size:15px;outline:none;color-scheme:dark;transition:border-color 200ms" style-focus="border-color:#E6B78F" />
+        </label>
+        <label style="display:grid;gap:8px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Guests
+          <input type="number" placeholder="60" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:13px 14px;color:#fff;font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color 200ms" style-focus="border-color:#E6B78F" />
+        </label>
+        <label style="display:grid;gap:8px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55)">City
+          <input type="text" placeholder="Houston" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:13px 14px;color:#fff;font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color 200ms" style-focus="border-color:#E6B78F" />
+        </label>
+      </div>
+      <label style="display:grid;gap:8px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Occasion
+        <select style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:13px 14px;color:#fff;font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color 200ms" style-focus="border-color:#E6B78F">
+          <option style="color:#111">Kids' birthday</option>
+          <option style="color:#111">Adult birthday</option>
+          <option style="color:#111">Baptism / baby shower</option>
+          <option style="color:#111">Corporate or resident event</option>
+          <option style="color:#111">Wedding / quinceañera</option>
+          <option style="color:#111">School or church function</option>
+          <option style="color:#111">Something else</option>
+        </select>
+      </label>
+      <label style="display:grid;gap:8px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Details
+        <textarea rows="4" value="{{ notes }}" onChange="{{ onNotes }}" placeholder="Venue, timing, allergies, the box you built…" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:13px 14px;color:#fff;font-family:'Inter',sans-serif;font-size:15px;letter-spacing:0;text-transform:none;outline:none;resize:vertical;transition:border-color 200ms" style-focus="border-color:#E6B78F"></textarea>
+      </label>
+      <button type="submit" style="background:#E6B78F;color:#14181C;border:none;border-radius:999px;padding:16px 24px;font-family:'Geist',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#fff;transform:translateY(-1px)">{{ submitLabel }}</button>
+      <p style="font-size:12px;color:rgba(255,255,255,0.4);margin:0;text-align:center">We answer within one business day.</p>
+    </form>
+  </div>
+</section>
+
+<footer style="background:#0A0E12;color:#fff;padding:clamp(52px,7vw,80px) 28px 40px">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;align-items:flex-start">
+    <div style="max-width:340px">
+      <span style="display:inline-flex;align-items:center;background:#FAF8F4;border-radius:14px;padding:12px 20px;margin-bottom:22px">
+        <svg width="162" height="39" viewBox="0 0 300 72" role="img" aria-label="Moon Bites — Grace Moments" style="display:block">
+          <g fill="none" stroke="#A9714B" stroke-width="3.2" stroke-linecap="round">
+            <path d="M44 12a26 26 0 1 0 0 48 20 20 0 0 1 0-48z"></path>
+            <ellipse cx="46" cy="40" rx="17" ry="6"></ellipse>
+            <path d="M29 40v7c0 3.3 7.6 6 17 6s17-2.7 17-6v-7"></path>
+            <path d="M52 18l1.6 4.2L58 24l-4.4 1.8L52 30l-1.6-4.2L46 24l4.4-1.8z" stroke-width="2.2"></path>
+          </g>
+          <text x="86" y="32" font-family="Geist, sans-serif" font-size="25" font-weight="500" letter-spacing="5" fill="#14181C">MOON</text>
+          <text x="86" y="57" font-family="Geist, sans-serif" font-size="25" font-weight="500" letter-spacing="5" fill="#14181C">BITES</text>
+          <text x="200" y="57" font-family="Geist, sans-serif" font-size="11" font-style="italic" letter-spacing="1" fill="#A9714B">Grace Moments</text>
+        </svg>
+      </span>
+      <p style="font-size:14px;line-height:1.7;color:rgba(255,255,255,0.5);margin:0">Dutch mini pancakes, cooked live at your event. Serving all of Texas — one warm box at a time.</p>
+    </div>
+    <div style="display:flex;gap:clamp(32px,5vw,64px);flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <p style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#E6B78F;margin:0 0 4px">Explore</p>
+        <a href="#experience" style="font-size:14px;color:rgba(255,255,255,0.65)" style-hover="color:#fff">The cart</a>
+        <a href="#build" style="font-size:14px;color:rgba(255,255,255,0.65)" style-hover="color:#fff">Build a bite</a>
+        <a href="#occasions" style="font-size:14px;color:rgba(255,255,255,0.65)" style-hover="color:#fff">Occasions</a>
+        <a href="#gallery" style="font-size:14px;color:rgba(255,255,255,0.65)" style-hover="color:#fff">Gallery</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <p style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#E6B78F;margin:0 0 4px">Get in touch</p>
+        <a href="#book" style="font-size:14px;color:rgba(255,255,255,0.65)" style-hover="color:#fff">Check your date</a>
+        <a href="https://wa.me/10000000000" style="font-size:14px;color:rgba(255,255,255,0.65)" style-hover="color:#fff">WhatsApp</a>
+        <a href="mailto:hello@bitesworld.net" style="font-size:14px;color:rgba(255,255,255,0.65)" style-hover="color:#fff">hello@bitesworld.net</a>
+        <a href="https://www.instagram.com" style="font-size:14px;color:rgba(255,255,255,0.65)" style-hover="color:#fff">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1320px;margin:clamp(40px,5vw,64px) auto 0;padding-top:26px;border-top:1px solid rgba(255,255,255,0.1);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35)">
+    <span>© 2026 Moon Bites · Grace Moments</span>
+    <span>Texas, USA</span>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const BASES = ["Classic butter & sugar", "Nutella dream", "Berry moon"];
+const TOPPINGS = ["Strawberries", "Bananas", "Oreo crumble", "Fruity cereal", "Cinnamon crunch", "Whipped cream", "Sugar pearls", "Sprinkles", "Toasted coconut", "Marshmallow"];
+const DRIZZLES = ["Chocolate", "Salted caramel", "Condensed milk", "No drizzle"];
+
+const CHIP = "font-family:'Geist',sans-serif;font-size:14px;font-weight:500;padding:11px 18px;border-radius:999px;cursor:pointer;transition:all 200ms cubic-bezier(0.22,1,0.36,1);";
+const OFF = CHIP + "background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.72);";
+const ON = CHIP + "background:#E6B78F;border:1px solid #E6B78F;color:#14181C;";
+
+class Component extends DCLogic {
+  state = { base: BASES[0], picked: ["Strawberries", "Bananas"], drizzle: DRIZZLES[0], notes: "", sent: false, added: false };
+
+  componentDidMount() { this.startMotion(); }
+  componentDidUpdate() { this.startMotion(); }
+
+  startMotion() {
+    if (this.started) return;
+    this.started = true;
+    this.nodes = { reveal: new Map(), counted: new Set() };
+    this.loop = () => {
+      try { this.tick(); } catch (err) { /* keep the loop alive */ }
+      this.raf = requestAnimationFrame(this.loop);
+    };
+    this.raf = requestAnimationFrame(this.loop);
+    this.fallback = setInterval(() => { try { this.tick(); } catch (err) {} }, 120);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); clearInterval(this.fallback); }
+
+  scroller() {
+    const c = document.scrollingElement || document.documentElement;
+    if (c && c.scrollTop > 0) return c.scrollTop;
+    const host = document.querySelector("[data-nav]");
+    let n = host && host.parentElement;
+    while (n && n !== document.body) {
+      if (n.scrollTop > 0) return n.scrollTop;
+      n = n.parentElement;
+    }
+    return c ? c.scrollTop : 0;
+  }
+
+  tick() {
+    const vh = window.innerHeight || 800;
+    const now = performance.now();
+
+    const nav = document.querySelector("[data-nav]");
+    if (nav) {
+      const solid = this.scroller() > vh * 0.72;
+      nav.style.background = solid ? "rgba(250,248,244,0.92)" : "rgba(0,0,0,0)";
+      nav.style.backdropFilter = solid ? "blur(14px)" : "none";
+      nav.style.borderBottomColor = solid ? "#E3DED5" : "rgba(255,255,255,0)";
+      const plate = document.querySelector("[data-navplate]");
+      if (plate) {
+        plate.style.borderColor = solid ? "#E3DED5" : "rgba(255,255,255,0.35)";
+        plate.style.boxShadow = solid ? "none" : "0 8px 24px -12px rgba(0,0,0,0.5)";
+        plate.style.padding = solid ? "7px 14px" : "9px 16px";
+      }
+      document.querySelectorAll("[data-navlink]").forEach((a) => { a.style.color = solid ? "#55524D" : "rgba(255,255,255,0.72)"; });
+    }
+
+    document.querySelectorAll("[data-parallax]").forEach((el) => {
+      const sp = parseFloat(el.getAttribute("data-parallax")) || 0.1;
+      const r = el.getBoundingClientRect();
+      const mid = r.top + r.height / 2 - vh / 2;
+      el.style.transform = "translate3d(0," + (-mid * sp).toFixed(1) + "px,0)";
+    });
+
+    document.querySelectorAll("[data-reveal]").forEach((el) => {
+      let st = this.nodes.reveal.get(el);
+      if (!st) {
+        const r0 = el.getBoundingClientRect();
+        st = { start: r0.top < vh * 0.9 ? now : null };
+        this.nodes.reveal.set(el, st);
+      }
+      if (st.start === null) {
+        const r = el.getBoundingClientRect();
+        if (r.top < vh * 0.88) st.start = now + (parseFloat(el.getAttribute("data-reveal")) || 0) * 110;
+        else { el.style.opacity = "0"; el.style.transform = "translate3d(0,34px,0)"; return; }
+      }
+      const p = Math.max(0, Math.min(1, (now - st.start) / 820));
+      const e = 1 - Math.pow(1 - p, 3);
+      el.style.opacity = String(e);
+      el.style.transform = "translate3d(0," + ((1 - e) * 34).toFixed(2) + "px,0)";
+    });
+
+    document.querySelectorAll("[data-count]").forEach((el) => {
+      if (this.nodes.counted.has(el)) return;
+      const r = el.getBoundingClientRect();
+      if (r.top > vh * 0.9) return;
+      this.nodes.counted.add(el);
+      const target = parseInt(el.getAttribute("data-count"), 10);
+      const t1 = performance.now();
+      const step = () => {
+        const p = Math.min(1, (performance.now() - t1) / 1100);
+        el.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  }
+
+  toggleTopping(t) {
+    this.setState((s) => {
+      const has = s.picked.includes(t);
+      if (has) return { picked: s.picked.filter((x) => x !== t), added: false };
+      if (s.picked.length >= 4) return { added: false };
+      return { picked: s.picked.concat(t), added: false };
+    });
+  }
+
+  orderText() {
+    const s = this.state;
+    const tops = s.picked.length ? s.picked.join(", ").toLowerCase() : "no toppings";
+    const dz = s.drizzle === "No drizzle" ? "no drizzle" : s.drizzle.toLowerCase() + " drizzle";
+    return s.base + " with " + tops + ", finished with " + dz + ".";
+  }
+
+  renderVals() {
+    const s = this.state;
+    return {
+      bases: BASES.map((b) => ({ label: b, style: s.base === b ? ON : OFF, pick: () => this.setState({ base: b, added: false }) })),
+      toppings: TOPPINGS.map((t) => ({ label: t, style: s.picked.includes(t) ? ON : OFF, pick: () => this.toggleTopping(t) })),
+      drizzles: DRIZZLES.map((d) => ({ label: d, style: s.drizzle === d ? ON : OFF, pick: () => this.setState({ drizzle: d, added: false }) })),
+      toppingCount: s.picked.length + "/4",
+      orderTitle: s.base,
+      orderLine: this.orderText(),
+      addLabel: s.added ? "Added to your request ↓" : "Add this box to my request",
+      notes: s.notes,
+      onNotes: (e) => this.setState({ notes: e.target.value }),
+      addToRequest: () => {
+        this.setState({ notes: "The box we'd like: " + this.orderText(), added: true });
+        const f = document.getElementById("book");
+        if (f) window.scrollTo({ top: f.offsetTop - 60, behavior: "smooth" });
+      },
+      submitLabel: s.sent ? "Request sent — we'll be in touch" : "Send my request",
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

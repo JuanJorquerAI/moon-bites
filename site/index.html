@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">Moon Bites — Dutch mini pancakes, cooked live at your event in Texas</title>
+<meta name="description" data-i18n-content="meta.description" content="Moon Bites rolls a live poffertjes cart into your party anywhere in Texas — fifty Dutch mini pancakes at a time, topped to order. Request a quote.">
+<meta name="theme-color" content="#0E1318">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Moon Bites">
+<meta property="og:title" data-i18n-content="meta.title" content="Moon Bites — Dutch mini pancakes, cooked live at your event in Texas">
+<meta property="og:description" data-i18n-content="meta.description" content="Moon Bites rolls a live poffertjes cart into your party anywhere in Texas — fifty Dutch mini pancakes at a time, topped to order. Request a quote.">
+<meta property="og:image" content="img/IMG_9541.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/IMG_9541.jpg">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- The wordmark, defined once and referenced in the header and the footer.
+     Vector lockup drawn for the handoff — swap in the client's real PNG/SVG
+     when it is available (see site/README.md). -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="mb-logo" viewBox="0 0 300 72">
+    <g fill="none" stroke="#A9714B" stroke-width="3.2" stroke-linecap="round">
+      <path d="M44 12a26 26 0 1 0 0 48 20 20 0 0 1 0-48z"/>
+      <ellipse cx="46" cy="40" rx="17" ry="6"/>
+      <path d="M29 40v7c0 3.3 7.6 6 17 6s17-2.7 17-6v-7"/>
+      <path d="M52 18l1.6 4.2L58 24l-4.4 1.8L52 30l-1.6-4.2L46 24l4.4-1.8z" stroke-width="2.2"/>
+    </g>
+    <text x="86" y="32" font-family="Geist, sans-serif" font-size="25" font-weight="500" letter-spacing="5" fill="#14181C">MOON</text>
+    <text x="86" y="57" font-family="Geist, sans-serif" font-size="25" font-weight="500" letter-spacing="5" fill="#14181C">BITES</text>
+    <text x="200" y="57" font-family="Geist, sans-serif" font-size="11" font-style="italic" letter-spacing="1" fill="#A9714B">Grace Moments</text>
+  </symbol>
+</svg>
+
+<div class="page">
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top">
+      <span class="logo-plate">
+        <svg width="150" height="36" viewBox="0 0 300 72" role="img" aria-label="Moon Bites — Grace Moments"><use href="#mb-logo"/></svg>
+      </span>
+    </a>
+    <nav class="nav__menu">
+      <a class="nav__link" href="#experience" data-i18n="nav.cart">The cart</a>
+      <a class="nav__link" href="#build" data-i18n="nav.build">Build a bite</a>
+      <a class="nav__link" href="#occasions" data-i18n="nav.occasions">Occasions</a>
+      <a class="nav__link" href="#gallery" data-i18n="nav.gallery">Gallery</a>
+      <div class="lang" role="group" data-i18n-aria="nav.langAria" aria-label="Choose language">
+        <button class="lang__btn" type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang__btn" type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn btn--copper" href="#book"><span data-i18n="nav.book">Book the cart</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- Always-on contact. SMS is the default channel for the anglo audience in
+     Texas; WhatsApp is the default for the hispanic one — both are offered so
+     nobody has to install anything. -->
+<div class="contact-dock">
+  <a class="dock-btn dock-btn--sms" data-contact="sms" href="#">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.3A8 8 0 1 1 21 12z"/></svg>
+    <span data-i18n="dock.sms">Text us</span>
+  </a>
+  <a class="dock-btn dock-btn--wa" data-contact="whatsapp" href="#" rel="noopener" target="_blank">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.2-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+    <span data-i18n="dock.whatsapp">WhatsApp</span>
+  </a>
+</div>
+
+<main>
+
+<section class="hero" id="top">
+  <div class="hero__media" data-parallax="0.28">
+    <img src="img/IMG_9541.jpg" alt="Moon Bites cart by the pool at night" fetchpriority="high">
+  </div>
+  <div class="hero__scrim"></div>
+  <div class="hero__glow"></div>
+  <div class="hero__body">
+    <p class="eyebrow hero__eyebrow enter" style="animation-duration:900ms;animation-delay:200ms" data-i18n="hero.eyebrow">Dutch mini pancakes · Live cart · Texas</p>
+    <h1 class="hero__title" id="hero-title"><!-- words injected by main.js for the staggered entrance --></h1>
+    <div class="hero__foot">
+      <p class="hero__lede enter" style="animation-delay:880ms" data-i18n="hero.lede">We roll our cart into your party and cook poffertjes in front of your guests — hot, fluffy, topped to order. The dessert nobody photographs later, because they eat it first.</p>
+      <div class="hero__actions enter" style="animation-delay:980ms">
+        <a class="btn btn--ivory" href="#book"><span data-i18n="hero.ctaDate">Check your date</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#build" data-i18n="hero.ctaBuild">Build your bite</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true">
+    <span data-i18n="hero.scroll">Scroll</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee"><!-- two identical groups injected by main.js --></div>
+</div>
+
+<section class="section section--light">
+  <div class="split">
+    <div data-reveal="0">
+      <p class="eyebrow" style="color:var(--copper);margin-bottom:26px" data-i18n="intro.eyebrow">Grace moments</p>
+      <h2 class="h2" style="max-width:17ch" data-i18n-html="intro.h2.html">A dessert that happens <em>in front of people</em>, not behind a kitchen door.</h2>
+      <p class="prose" data-i18n="intro.p1">Poffertjes are Dutch mini pancakes: fifty of them puff up at once on a copper-dimpled griddle, get flipped with a skewer, and go straight into a warm box with whatever the guest points at.</p>
+      <p class="prose" data-i18n="intro.p2">It smells like a home kitchen, it moves like a bar, and it turns a corner of your party into the place everyone stands.</p>
+      <div class="stats">
+        <div class="stats__cell">
+          <p class="stats__n" data-count="200">200</p>
+          <p class="stats__label" data-i18n="intro.stat1">servings per hour</p>
+        </div>
+        <div class="stats__cell">
+          <p class="stats__n" data-count="50">50</p>
+          <p class="stats__label" data-i18n="intro.stat2">pancakes per griddle</p>
+        </div>
+        <div class="stats__cell">
+          <p class="stats__n" data-count="12">12</p>
+          <p class="stats__label" data-i18n="intro.stat3">toppings on the bar</p>
+        </div>
+        <div class="stats__cell">
+          <p class="stats__n">90<small data-i18n="intro.stat4.unit">min</small></p>
+          <p class="stats__label" data-i18n="intro.stat4">on site before you start</p>
+        </div>
+      </div>
+    </div>
+    <div class="stack-photo" data-reveal="1">
+      <div class="stack-photo__main">
+        <img src="img/IMG_9536.jpg" data-parallax="0.08" data-i18n-alt="intro.photoMainAlt" alt="Guests holding boxes of mini pancakes" loading="lazy">
+      </div>
+      <div class="stack-photo__inset">
+        <img src="img/IMG_4594.jpg" data-i18n-alt="intro.photoInsetAlt" alt="Serving a fresh box of mini pancakes" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark" id="experience">
+  <div class="shell" style="padding-left:0;padding-right:0">
+    <div class="section-head" data-reveal="0">
+      <h2 class="h2" style="max-width:18ch" data-i18n-html="service.h2.html">How an hour with the cart <em>actually goes</em></h2>
+      <p class="eyebrow" style="color:rgba(255,255,255,0.45)" data-i18n="service.label">The service</p>
+    </div>
+    <div class="service">
+      <figure class="service__sticky" style="margin:0">
+        <img src="img/IMG_5162.jpg" data-i18n-alt="service.photoAlt" alt="The Moon Bites cart set up poolside" loading="lazy">
+        <figcaption class="service__caption" data-i18n="service.caption">The cart arrives folded, set up and lit within 45 minutes.</figcaption>
+      </figure>
+      <div>
+        <div class="step" data-reveal="0">
+          <span class="step__n">01</span>
+          <div>
+            <h3 data-i18n="service.step1.title">We arrive 90 minutes early</h3>
+            <p data-i18n="service.step1.body">Cart, umbrella, warm lights, toppings bar and griddle. You don't lift anything and we need one standard outlet.</p>
+          </div>
+        </div>
+        <div class="step" data-reveal="1">
+          <span class="step__n">02</span>
+          <div>
+            <h3 data-i18n="service.step2.title">Batter goes down at your cue</h3>
+            <p data-i18n="service.step2.body">Fifty pancakes rise at once. Nothing is pre-cooked, nothing sits under a heat lamp, and the smell does the inviting.</p>
+          </div>
+        </div>
+        <div class="step" data-reveal="2">
+          <span class="step__n">03</span>
+          <div>
+            <h3 data-i18n="service.step3.title">Every guest builds their own box</h3>
+            <p data-i18n="service.step3.body">Twelve toppings, three drizzles, as many combinations as there are kids in the line. Kids come back three times — plan for it.</p>
+          </div>
+        </div>
+        <div class="step" data-reveal="3">
+          <span class="step__n">04</span>
+          <div>
+            <h3 data-i18n="service.step4.title">We leave the corner cleaner than we found it</h3>
+            <p data-i18n="service.step4.body">Griddle off, cart wiped, trash bagged and out. The only thing left behind is the smell of vanilla.</p>
+          </div>
+        </div>
+        <a class="link-arrow" href="#book" data-reveal="4"><span data-i18n="service.link">Ask about your venue</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="builder" id="build">
+  <div class="builder__inner">
+    <div class="builder__head" data-reveal="0">
+      <p class="eyebrow" data-i18n="build.eyebrow">The toppings bar</p>
+      <h2 class="h2" data-i18n-html="build.h2.html">Build the box you'd order</h2>
+      <p data-i18n="build.sub">Pick a base, up to four toppings and a drizzle. Send it with your request and we'll load the cart for it.</p>
+    </div>
+    <div class="builder__grid">
+      <div data-reveal="1">
+        <p class="builder__label" data-i18n="build.label1">01 — Base</p>
+        <div class="chips" id="bases" role="group"></div>
+        <p class="builder__label"><span data-i18n="build.label2">02 — Toppings</span> <span class="count" id="topping-count">0/4</span></p>
+        <div class="chips" id="toppings" role="group"></div>
+        <p class="builder__label" data-i18n="build.label3">03 — Drizzle</p>
+        <div class="chips" id="drizzles" role="group"></div>
+      </div>
+      <div class="order-card" data-reveal="2">
+        <div class="order-card__media">
+          <img src="img/IMG_9531.jpg" data-i18n-alt="build.photoAlt" alt="Two boxes of topped mini pancakes" loading="lazy">
+          <p class="order-card__title" id="order-title"></p>
+        </div>
+        <div class="order-card__body">
+          <p class="builder__label" data-i18n="build.yourBox">Your box</p>
+          <p class="order-card__line" id="order-line" aria-live="polite"></p>
+          <button class="btn btn--sand" type="button" id="add-box"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="occasions">
+  <div class="shell" style="padding-left:0;padding-right:0">
+    <div class="section-head" data-reveal="0">
+      <h2 class="h2" style="max-width:16ch" data-i18n-html="occasions.h2.html">Where the cart <em>shows up</em></h2>
+      <p class="section-head__note" data-i18n="occasions.sub">From 30 guests. Backyards, clubhouses, ballrooms, school gyms and pool decks across Texas.</p>
+    </div>
+    <div class="cards">
+      <article class="card" data-reveal="0">
+        <img src="img/IMG_9552.jpg" data-i18n-alt="occasions.c1.alt" alt="Kids' party by the pool" loading="lazy">
+        <div class="card__body">
+          <h3 data-i18n="occasions.c1.title">Kids' birthdays</h3>
+          <p data-i18n="occasions.c1.body">Sprinkles, pearls and a line that keeps reforming.</p>
+        </div>
+      </article>
+      <article class="card" data-reveal="1">
+        <img src="img/IMG_5174.jpg" data-i18n-alt="occasions.c2.alt" alt="Cart at an apartment community event" loading="lazy">
+        <div class="card__body">
+          <h3 data-i18n="occasions.c2.title">Corporate &amp; resident events</h3>
+          <p data-i18n="occasions.c2.body">Invoiced, insured, and done in one clean hour.</p>
+        </div>
+      </article>
+      <article class="card" data-reveal="2">
+        <img src="img/IMG_5148.jpg" data-i18n-alt="occasions.c3.alt" alt="Toppings bar on the cart" loading="lazy">
+        <div class="card__body">
+          <h3 data-i18n="occasions.c3.title">Baptisms &amp; baby showers</h3>
+          <p data-i18n="occasions.c3.body">Soft palettes, small boxes, quiet service.</p>
+        </div>
+      </article>
+      <article class="card" data-reveal="3">
+        <img src="img/IMG_9540.jpg" data-i18n-alt="occasions.c4.alt" alt="Evening event with the cart" loading="lazy">
+        <div class="card__body">
+          <h3 data-i18n="occasions.c4.title">Weddings &amp; quinces</h3>
+          <p data-i18n="occasions.c4.body">Late-night dessert, served warm at 11pm.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="gallery__head" data-reveal="0">
+    <h2 data-i18n="gallery.h2">Nights we rolled up</h2>
+    <p class="gallery__hint" data-i18n="gallery.hint">Drag to explore →</p>
+  </div>
+  <div class="gallery__rail" id="rail">
+    <figure><img src="img/IMG_9539.jpg" data-i18n-alt="gallery.alt" alt="Moon Bites event" loading="lazy"></figure>
+    <figure><img src="img/IMG_5142.jpg" data-i18n-alt="gallery.alt" alt="Moon Bites event" loading="lazy"></figure>
+    <figure><img src="img/IMG_9544.jpg" data-i18n-alt="gallery.alt" alt="Moon Bites event" loading="lazy"></figure>
+    <figure><img src="img/IMG_5167.jpg" data-i18n-alt="gallery.alt" alt="Moon Bites event" loading="lazy"></figure>
+    <figure><img src="img/IMG_9547.jpg" data-i18n-alt="gallery.alt" alt="Moon Bites event" loading="lazy"></figure>
+    <figure><img src="img/IMG_5177.jpg" data-i18n-alt="gallery.alt" alt="Moon Bites event" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="quotes">
+    <figure class="quote-hero" data-reveal="0">
+      <blockquote data-i18n="quotes.hero">“They set up by the pool at eight and the line didn't stop until the batter ran out. My neighbors are still asking who catered it.”</blockquote>
+      <figcaption data-i18n="quotes.heroSource">Resident event · Huntsville, TX</figcaption>
+    </figure>
+    <div class="quote-row">
+      <div class="quote" data-reveal="0">
+        <p data-i18n="quotes.q1">“My daughter asked for the pancake cart instead of a cake. Best decision of the whole party.”</p>
+        <p class="quote__source" data-i18n="quotes.q1Source">Birthday · Conroe</p>
+      </div>
+      <div class="quote" data-reveal="1">
+        <p data-i18n="quotes.q2">“Warm, personal, and genuinely delicious. They treated our guests like family the whole night.”</p>
+        <p class="quote__source" data-i18n="quotes.q2Source">Baptism · The Woodlands</p>
+      </div>
+      <div class="quote" data-reveal="2">
+        <p data-i18n="quotes.q3">“Clean quote, on time, zero mess left behind. We've booked them three times now.”</p>
+        <p class="quote__source" data-i18n="quotes.q3Source">Community manager · Houston</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="book__bg" aria-hidden="true">
+    <img src="img/IMG_5170.jpg" data-parallax="0.12" alt="" loading="lazy">
+  </div>
+  <div class="book__scrim"></div>
+  <div class="book__inner">
+    <div data-reveal="0">
+      <p class="eyebrow" data-i18n="book.eyebrow">Check your date</p>
+      <h2 class="h2" data-i18n-html="book.h2.html">Tell us the date. We'll bring the griddle.</h2>
+      <p class="book__lede" data-i18n="book.lede">Written quote within 24 hours, tailored to your guest count and venue. Nothing to pay until you approve it.</p>
+      <div class="book__channels">
+        <a class="btn btn--outline" data-contact="whatsapp" href="#" rel="noopener" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.2-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          <span data-i18n="book.whatsapp">WhatsApp us</span>
+        </a>
+        <a class="book__mail" data-contact="email" href="#">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg>
+          <span data-contact-label="email"></span>
+        </a>
+      </div>
+      <div class="badges">
+        <span class="badge" data-i18n="book.badge1">Statewide in Texas</span>
+        <span class="badge" data-i18n="book.badge2">From 30 guests</span>
+        <span class="badge" data-i18n="book.badge3">Licensed &amp; insured</span>
+      </div>
+    </div>
+
+    <form class="form" id="book-form" data-reveal="1" novalidate>
+      <div class="form__row">
+        <label class="field"><span data-i18n="form.name">Name</span>
+          <input type="text" name="name" autocomplete="name" required data-i18n-ph="form.namePh" placeholder="Your name">
+        </label>
+        <label class="field"><span data-i18n="form.email">Email</span>
+          <input type="email" name="email" autocomplete="email" required data-i18n-ph="form.emailPh" placeholder="you@email.com">
+        </label>
+      </div>
+      <div class="form__row form__row--three">
+        <label class="field"><span data-i18n="form.date">Event date</span>
+          <input type="date" name="date">
+        </label>
+        <label class="field"><span data-i18n="form.guests">Guests</span>
+          <input type="number" name="guests" min="1" data-i18n-ph="form.guestsPh" placeholder="60">
+        </label>
+        <label class="field"><span data-i18n="form.city">City</span>
+          <input type="text" name="city" data-i18n-ph="form.cityPh" placeholder="Houston">
+        </label>
+      </div>
+      <label class="field"><span data-i18n="form.occasion">Occasion</span>
+        <select name="occasion" id="occasion"></select>
+      </label>
+      <label class="field"><span data-i18n="form.details">Details</span>
+        <textarea name="details" id="details" rows="4" data-i18n-ph="form.detailsPh" placeholder="Venue, timing, allergies, the box you built…"></textarea>
+      </label>
+      <button class="btn btn--sand" type="submit" id="submit-btn" data-i18n="form.submit">Send my request</button>
+      <p class="form__note" data-i18n="form.note">We answer within one business day.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <span class="logo-plate">
+        <svg width="162" height="39" viewBox="0 0 300 72" role="img" aria-label="Moon Bites — Grace Moments"><use href="#mb-logo"/></svg>
+      </span>
+      <p data-i18n="footer.tagline">Dutch mini pancakes, cooked live at your event. Serving all of Texas — one warm box at a time.</p>
+    </div>
+    <div class="footer__cols">
+      <div class="footer__col">
+        <p data-i18n="footer.explore">Explore</p>
+        <a href="#experience" data-i18n="nav.cart">The cart</a>
+        <a href="#build" data-i18n="nav.build">Build a bite</a>
+        <a href="#occasions" data-i18n="nav.occasions">Occasions</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+      </div>
+      <div class="footer__col">
+        <p data-i18n="footer.touch">Get in touch</p>
+        <a href="#book" data-i18n="book.eyebrow">Check your date</a>
+        <a data-contact="whatsapp" href="#" rel="noopener" target="_blank" data-i18n="dock.whatsapp">WhatsApp</a>
+        <a data-contact="email" href="#"><span data-contact-label="email"></span></a>
+        <a data-contact="instagram" href="#" rel="noopener" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span data-i18n="footer.copy">© 2026 Moon Bites · Grace Moments</span>
+    <span data-i18n="footer.region">Texas, USA</span>
+  </div>
+</footer>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

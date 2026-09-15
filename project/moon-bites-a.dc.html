@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  body { margin:0; background:#FAFAF7; color:#111110; font-family:'Inter',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#0B4F6C; text-decoration:none; }
+  a:hover { color:#3FA796; }
+  details > summary { list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker { display:none; }
+  @keyframes mb-rise { from { opacity:0; transform:translateY(16px);} to { opacity:1; transform:none;} }
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(250,250,247,0.9);backdrop-filter:blur(12px);border-bottom:1px solid #E8E6E0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;padding:14px 0">
+      <img src="https://www.bitesworld.net/airo-assets/images/logo/horizontal" alt="Moon Bites" style="height:34px;width:auto;display:block" />
+    </a>
+    <nav style="display:flex;align-items:center;gap:26px;flex-wrap:wrap;padding-bottom:8px">
+      <a href="#occasions" style="font-size:14px;font-weight:500;color:#5F5F5C" style-hover="color:#111110">Occasions</a>
+      <a href="#menu" style="font-size:14px;font-weight:500;color:#5F5F5C" style-hover="color:#111110">Menu</a>
+      <a href="#process" style="font-size:14px;font-weight:500;color:#5F5F5C" style-hover="color:#111110">How it works</a>
+      <a href="#gallery" style="font-size:14px;font-weight:500;color:#5F5F5C" style-hover="color:#111110">Gallery</a>
+      <a href="#faq" style="font-size:14px;font-weight:500;color:#5F5F5C" style-hover="color:#111110">FAQ</a>
+      <span style="display:inline-flex;border:1px solid #E8E6E0;border-radius:999px;overflow:hidden;font-size:12px;font-weight:600">
+        <span style="padding:6px 11px;background:#0B4F6C;color:#fff">EN</span>
+        <span style="padding:6px 11px;color:#5F5F5C">ES</span>
+      </span>
+      <a href="#quote" style="display:inline-flex;align-items:center;gap:8px;background:#0B4F6C;color:#fff;font-size:14px;font-weight:600;padding:11px 18px;border-radius:8px;transition:background 150ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#0a4560;color:#fff">Request a quote
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" style="position:relative;background:#0B0B0B;color:#fff;overflow:hidden">
+  <div style="position:absolute;top:-220px;left:-160px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(63,167,150,0.16),transparent 65%);pointer-events:none"></div>
+  <div style="position:absolute;bottom:-320px;right:-180px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle,rgba(11,79,108,0.35),transparent 65%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:104px 24px 112px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:60px;align-items:center">
+    <div style="animation:mb-rise 700ms cubic-bezier(0.22,1,0.36,1) both">
+      <p style="font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#3FA796;margin:0 0 24px">Catering · Dessert tables · Texas</p>
+      <h1 style="font-family:'Geist',sans-serif;font-size:clamp(38px,5vw,58px);font-weight:700;letter-spacing:-0.025em;line-height:1.07;margin:0 0 24px;text-wrap:pretty">Food that makes the room go <span style="color:#3FA796">quiet for a second</span>.</h1>
+      <p style="font-size:18px;line-height:1.6;color:rgba(255,255,255,0.72);margin:0 0 36px;max-width:54ch;text-wrap:pretty">Moon Bites caters birthdays, christenings, showers and company celebrations across Texas — handmade sweet tables and savory bites, delivered and styled on site.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:44px">
+        <a href="#quote" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:#0B0B0B;font-size:15px;font-weight:600;padding:14px 24px;border-radius:8px" style-hover="background:#F1F1EE;color:#0B0B0B">Plan my event
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+        <a href="#menu" style="display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,0.18);color:#fff;font-size:15px;font-weight:600;padding:14px 24px;border-radius:8px;transition:all 150ms cubic-bezier(0.22,1,0.36,1)" style-hover="border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05);color:#fff">See the menu</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;font-size:13px;color:rgba(255,255,255,0.55)">
+        <span>Statewide in Texas</span><span>·</span><span>From 15 guests</span><span>·</span><span>72h lead time</span>
+      </div>
+    </div>
+    <div style="position:relative;height:520px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);box-shadow:0 40px 80px -32px rgba(0,0,0,0.8)">
+      <image-slot id="mb-a-hero" shape="rect" placeholder="Hero photo — a full dessert table, styled and lit"></image-slot>
+    </div>
+  </div>
+</section>
+
+<section style="border-bottom:1px solid #E8E6E0;background:#fff">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:#E8E6E0">
+      <div style="background:#fff;padding:36px 20px 36px 0">
+        <p style="font-family:'Geist',sans-serif;font-size:32px;font-weight:700;letter-spacing:-0.02em;margin:0 0 6px;color:#0B4F6C">500+</p>
+        <p style="font-size:13px;color:#5F5F5C;margin:0">events catered</p>
+      </div>
+      <div style="background:#fff;padding:36px 20px 36px 28px">
+        <p style="font-family:'Geist',sans-serif;font-size:32px;font-weight:700;letter-spacing:-0.02em;margin:0 0 6px;color:#0B4F6C">12 yrs</p>
+        <p style="font-size:13px;color:#5F5F5C;margin:0">in the kitchen</p>
+      </div>
+      <div style="background:#fff;padding:36px 20px 36px 28px">
+        <p style="font-family:'Geist',sans-serif;font-size:32px;font-weight:700;letter-spacing:-0.02em;margin:0 0 6px;color:#0B4F6C">4.9</p>
+        <p style="font-size:13px;color:#5F5F5C;margin:0">average client rating</p>
+      </div>
+      <div style="background:#fff;padding:36px 20px 36px 28px">
+        <p style="font-family:'Geist',sans-serif;font-size:32px;font-weight:700;letter-spacing:-0.02em;margin:0 0 6px;color:#0B4F6C">100%</p>
+        <p style="font-size:13px;color:#5F5F5C;margin:0">made in house</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="occasions" style="padding:104px 24px">
+  <div style="max-width:1200px;margin:0 auto">
+    <p style="font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#0B4F6C;margin:0 0 18px">What we cater</p>
+    <h2 style="font-family:'Geist',sans-serif;font-size:clamp(28px,3.4vw,40px);font-weight:600;letter-spacing:-0.02em;line-height:1.12;margin:0 0 18px;max-width:22ch;text-wrap:pretty">One kitchen, every kind of celebration</h2>
+    <p style="font-size:16px;line-height:1.6;color:#5F5F5C;margin:0 0 52px;max-width:60ch">Every order is cooked to the date, the guest count and the room — not pulled off a fixed catalog.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px">
+      <div style="background:#fff;border:1px solid #E8E6E0;border-radius:12px;padding:26px;transition:all 150ms cubic-bezier(0.22,1,0.36,1)" style-hover="border-color:rgba(11,79,108,0.25);box-shadow:0 12px 28px -14px rgba(11,79,108,0.35);transform:translateY(-1px)">
+        <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(140deg,rgba(11,79,108,0.14),rgba(63,167,150,0.07));display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.5"><path d="M20 21v-8H4v8M2 21h20M7 13V9a5 5 0 0 1 10 0v4M12 2v2"></path></svg>
+        </div>
+        <h3 style="font-family:'Geist',sans-serif;font-size:16px;font-weight:600;margin:0 0 8px">Kids' birthdays</h3>
+        <p style="font-size:14px;line-height:1.6;color:#5F5F5C;margin:0">Themed sweet tables, mini savory bites and a cake that matches the invitation.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E6E0;border-radius:12px;padding:26px;transition:all 150ms cubic-bezier(0.22,1,0.36,1)" style-hover="border-color:rgba(11,79,108,0.25);box-shadow:0 12px 28px -14px rgba(11,79,108,0.35);transform:translateY(-1px)">
+        <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(140deg,rgba(11,79,108,0.14),rgba(63,167,150,0.07));display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.5"><path d="M3 21V7l9-4 9 4v14M9 21v-6h6v6M7 11h.01M12 11h.01M17 11h.01"></path></svg>
+        </div>
+        <h3 style="font-family:'Geist',sans-serif;font-size:16px;font-weight:600;margin:0 0 8px">Corporate events</h3>
+        <p style="font-size:14px;line-height:1.6;color:#5F5F5C;margin:0">Breakfasts, launches and end-of-year parties. Invoiced, on time, no improvising.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E6E0;border-radius:12px;padding:26px;transition:all 150ms cubic-bezier(0.22,1,0.36,1)" style-hover="border-color:rgba(11,79,108,0.25);box-shadow:0 12px 28px -14px rgba(11,79,108,0.35);transform:translateY(-1px)">
+        <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(140deg,rgba(11,79,108,0.14),rgba(63,167,150,0.07));display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.5"><path d="M12 21s-7-4.7-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.3-7 10-7 10z"></path></svg>
+        </div>
+        <h3 style="font-family:'Geist',sans-serif;font-size:16px;font-weight:600;margin:0 0 8px">Christenings &amp; showers</h3>
+        <p style="font-size:14px;line-height:1.6;color:#5F5F5C;margin:0">Soft palettes, small portions, tables styled to photograph well.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E6E0;border-radius:12px;padding:26px;transition:all 150ms cubic-bezier(0.22,1,0.36,1)" style-hover="border-color:rgba(11,79,108,0.25);box-shadow:0 12px 28px -14px rgba(11,79,108,0.35);transform:translateY(-1px)">
+        <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(140deg,rgba(11,79,108,0.14),rgba(63,167,150,0.07));display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.5"><path d="M6 3h12l2 5H4zM5 8v13h14V8M10 13h4"></path></svg>
+        </div>
+        <h3 style="font-family:'Geist',sans-serif;font-size:16px;font-weight:600;margin:0 0 8px">Cakes to order</h3>
+        <p style="font-size:14px;line-height:1.6;color:#5F5F5C;margin:0">Layer cakes and desserts made to your flavor, size and color palette.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E6E0;border-radius:12px;padding:26px;transition:all 150ms cubic-bezier(0.22,1,0.36,1)" style-hover="border-color:rgba(11,79,108,0.25);box-shadow:0 12px 28px -14px rgba(11,79,108,0.35);transform:translateY(-1px)">
+        <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(140deg,rgba(11,79,108,0.14),rgba(63,167,150,0.07));display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.5"><path d="M20 7H4v14h16zM20 7l-2-4H6L4 7M9 11h6"></path></svg>
+        </div>
+        <h3 style="font-family:'Geist',sans-serif;font-size:16px;font-weight:600;margin:0 0 8px">Snack boxes</h3>
+        <p style="font-size:14px;line-height:1.6;color:#5F5F5C;margin:0">Individually boxed sweet or savory sets for offices, gifts and school events.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #E8E6E0;border-radius:12px;padding:26px;transition:all 150ms cubic-bezier(0.22,1,0.36,1)" style-hover="border-color:rgba(11,79,108,0.25);box-shadow:0 12px 28px -14px rgba(11,79,108,0.35);transform:translateY(-1px)">
+        <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(140deg,rgba(11,79,108,0.14),rgba(63,167,150,0.07));display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.5"><path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 7V4M8.5 10.5h7"></path></svg>
+        </div>
+        <h3 style="font-family:'Geist',sans-serif;font-size:16px;font-weight:600;margin:0 0 8px">On-site styling</h3>
+        <p style="font-size:14px;line-height:1.6;color:#5F5F5C;margin:0">We arrive early, set the table, and take everything away when it ends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:#fff;border-top:1px solid #E8E6E0;border-bottom:1px solid #E8E6E0;padding:104px 24px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;margin-bottom:52px">
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#0B4F6C;margin:0 0 18px">The menu</p>
+        <h2 style="font-family:'Geist',sans-serif;font-size:clamp(28px,3.4vw,40px);font-weight:600;letter-spacing:-0.02em;line-height:1.12;margin:0;max-width:20ch;text-wrap:pretty">Three tables. Mix them however you want.</h2>
+      </div>
+      <a href="#quote" style="font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:7px">Ask for the full list
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px">
+      <div style="border:1px solid #E8E6E0;border-radius:12px;overflow:hidden;background:#fff">
+        <div style="height:230px;background:#0B1520"><image-slot id="mb-a-sweet" shape="rect" placeholder="Sweet table — macarons, mini tarts, cake pops"></image-slot></div>
+        <div style="padding:26px">
+          <h3 style="font-family:'Geist',sans-serif;font-size:18px;font-weight:600;margin:0 0 12px">Sweet table</h3>
+          <p style="font-size:14px;line-height:1.6;color:#5F5F5C;margin:0 0 18px">Mini tarts, macarons, cake pops, brownies, seasonal fruit and a centerpiece cake.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="font-size:12px;font-weight:500;color:#0B4F6C;background:rgba(11,79,108,0.07);border-radius:999px;padding:5px 12px">Custom colors</span>
+            <span style="font-size:12px;font-weight:500;color:#0B4F6C;background:rgba(11,79,108,0.07);border-radius:999px;padding:5px 12px">Gluten-free option</span>
+          </div>
+        </div>
+      </div>
+      <div style="border:1px solid #E8E6E0;border-radius:12px;overflow:hidden;background:#fff">
+        <div style="height:230px;background:#0B1520"><image-slot id="mb-a-savory" shape="rect" placeholder="Savory bites — empanadas, sliders, skewers"></image-slot></div>
+        <div style="padding:26px">
+          <h3 style="font-family:'Geist',sans-serif;font-size:18px;font-weight:600;margin:0 0 12px">Savory bites</h3>
+          <p style="font-size:14px;line-height:1.6;color:#5F5F5C;margin:0 0 18px">Empanadas, sliders, skewers, warm dips and finger sandwiches served in rounds.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="font-size:12px;font-weight:500;color:#0B4F6C;background:rgba(11,79,108,0.07);border-radius:999px;padding:5px 12px">Hot service</span>
+            <span style="font-size:12px;font-weight:500;color:#0B4F6C;background:rgba(11,79,108,0.07);border-radius:999px;padding:5px 12px">Vegetarian set</span>
+          </div>
+        </div>
+      </div>
+      <div style="border:1px solid #E8E6E0;border-radius:12px;overflow:hidden;background:#fff">
+        <div style="height:230px;background:#0B1520"><image-slot id="mb-a-graze" shape="rect" placeholder="Grazing board — cheese, charcuterie, fruit"></image-slot></div>
+        <div style="padding:26px">
+          <h3 style="font-family:'Geist',sans-serif;font-size:18px;font-weight:600;margin:0 0 12px">Grazing boards</h3>
+          <p style="font-size:14px;line-height:1.6;color:#5F5F5C;margin:0 0 18px">Cheese, charcuterie, fruit and bread, built to the length of your table.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="font-size:12px;font-weight:500;color:#0B4F6C;background:rgba(11,79,108,0.07);border-radius:999px;padding:5px 12px">By the foot</span>
+            <span style="font-size:12px;font-weight:500;color:#0B4F6C;background:rgba(11,79,108,0.07);border-radius:999px;padding:5px 12px">Boards included</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="background:#0B0B0B;color:#fff;padding:104px 24px">
+  <div style="max-width:1200px;margin:0 auto">
+    <p style="font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#3FA796;margin:0 0 18px">How it works</p>
+    <h2 style="font-family:'Geist',sans-serif;font-size:clamp(28px,3.4vw,40px);font-weight:600;letter-spacing:-0.02em;line-height:1.12;margin:0 0 14px;max-width:20ch;text-wrap:pretty">Four steps, no guesswork</h2>
+    <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.6);margin:0 0 56px;max-width:58ch">You tell us the date and the room. We handle the rest — quote, tasting, kitchen and setup.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.12);border-radius:12px;overflow:hidden">
+      <div style="background:#0B0B0B;padding:34px 28px">
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#3FA796;margin:0 0 22px">01</p>
+        <h3 style="font-family:'Geist',sans-serif;font-size:17px;font-weight:600;margin:0 0 10px">Tell us the plan</h3>
+        <p style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.6);margin:0">Date, guest count, venue and the kind of event. Two minutes on the form.</p>
+      </div>
+      <div style="background:#0B0B0B;padding:34px 28px">
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#3FA796;margin:0 0 22px">02</p>
+        <h3 style="font-family:'Geist',sans-serif;font-size:17px;font-weight:600;margin:0 0 10px">Get a quote in 24h</h3>
+        <p style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.6);margin:0">A written proposal with the menu, the portions and the total. No surprises later.</p>
+      </div>
+      <div style="background:#0B0B0B;padding:34px 28px">
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#3FA796;margin:0 0 22px">03</p>
+        <h3 style="font-family:'Geist',sans-serif;font-size:17px;font-weight:600;margin:0 0 10px">Taste and adjust</h3>
+        <p style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.6);margin:0">Optional tasting for events over 50 guests. Swap anything you don't love.</p>
+      </div>
+      <div style="background:#0B0B0B;padding:34px 28px">
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#3FA796;margin:0 0 22px">04</p>
+        <h3 style="font-family:'Geist',sans-serif;font-size:17px;font-weight:600;margin:0 0 10px">We set the table</h3>
+        <p style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.6);margin:0">We deliver, style the table on site, and clear everything when the party ends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="padding:104px 24px">
+  <div style="max-width:1200px;margin:0 auto">
+    <p style="font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#0B4F6C;margin:0 0 18px">Recent events</p>
+    <h2 style="font-family:'Geist',sans-serif;font-size:clamp(28px,3.4vw,40px);font-weight:600;letter-spacing:-0.02em;line-height:1.12;margin:0 0 52px;max-width:22ch;text-wrap:pretty">Tables we built this season</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px">
+      <div style="grid-column:span 2;min-width:0;height:320px;border-radius:12px;overflow:hidden;border:1px solid #E8E6E0"><image-slot id="mb-a-g1" shape="rect" placeholder="Wide event shot"></image-slot></div>
+      <div style="height:320px;border-radius:12px;overflow:hidden;border:1px solid #E8E6E0"><image-slot id="mb-a-g2" shape="rect" placeholder="Detail — dessert close-up"></image-slot></div>
+      <div style="height:320px;border-radius:12px;overflow:hidden;border:1px solid #E8E6E0"><image-slot id="mb-a-g3" shape="rect" placeholder="Cake"></image-slot></div>
+      <div style="height:260px;border-radius:12px;overflow:hidden;border:1px solid #E8E6E0"><image-slot id="mb-a-g4" shape="rect" placeholder="Snack boxes"></image-slot></div>
+      <div style="height:260px;border-radius:12px;overflow:hidden;border:1px solid #E8E6E0"><image-slot id="mb-a-g5" shape="rect" placeholder="Corporate setup"></image-slot></div>
+      <div style="grid-column:span 2;min-width:0;height:260px;border-radius:12px;overflow:hidden;border:1px solid #E8E6E0"><image-slot id="mb-a-g6" shape="rect" placeholder="Wide christening table"></image-slot></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid #E8E6E0;border-bottom:1px solid #E8E6E0;padding:104px 24px">
+  <div style="max-width:1200px;margin:0 auto">
+    <p style="font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#0B4F6C;margin:0 0 52px">What clients say</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+      <figure style="margin:0;border-left:2px solid #0B4F6C;padding:4px 0 4px 24px">
+        <blockquote style="margin:0 0 18px;font-family:'Geist',sans-serif;font-size:19px;line-height:1.45;letter-spacing:-0.01em;text-wrap:pretty">"They arrived two hours early, set everything up, and the table looked better than the reference photos I sent."</blockquote>
+        <figcaption style="font-size:13px;color:#5F5F5C">Andrea R. — 40th birthday, Austin</figcaption>
+      </figure>
+      <figure style="margin:0;border-left:2px solid #0B4F6C;padding:4px 0 4px 24px">
+        <blockquote style="margin:0 0 18px;font-family:'Geist',sans-serif;font-size:19px;line-height:1.45;letter-spacing:-0.01em;text-wrap:pretty">"We've used Moon Bites for three company events. The quote is always clear and the food always shows up on time."</blockquote>
+        <figcaption style="font-size:13px;color:#5F5F5C">Marcus T. — Operations, Houston</figcaption>
+      </figure>
+      <figure style="margin:0;border-left:2px solid #0B4F6C;padding:4px 0 4px 24px">
+        <blockquote style="margin:0 0 18px;font-family:'Geist',sans-serif;font-size:19px;line-height:1.45;letter-spacing:-0.01em;text-wrap:pretty">"My daughter's christening had 80 guests and not one dessert was left. That says everything."</blockquote>
+        <figcaption style="font-size:13px;color:#5F5F5C">Lucía M. — Christening, Dallas</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding:104px 24px">
+  <div style="max-width:820px;margin:0 auto">
+    <p style="font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#0B4F6C;margin:0 0 18px">Questions</p>
+    <h2 style="font-family:'Geist',sans-serif;font-size:clamp(28px,3.4vw,40px);font-weight:600;letter-spacing:-0.02em;line-height:1.12;margin:0 0 44px;text-wrap:pretty">Before you ask for a quote</h2>
+    <details style="border-top:1px solid #E8E6E0;padding:22px 0" open="">
+      <summary style="display:flex;justify-content:space-between;gap:20px;font-family:'Geist',sans-serif;font-size:17px;font-weight:600">How far in advance should I book?<span style="color:#0B4F6C">+</span></summary>
+      <p style="font-size:15px;line-height:1.65;color:#5F5F5C;margin:14px 0 0;max-width:62ch">Two weeks is comfortable for most events. We can turn around smaller orders in 72 hours, and we hold peak dates (December, graduation season) further out.</p>
+    </details>
+    <details style="border-top:1px solid #E8E6E0;padding:22px 0">
+      <summary style="display:flex;justify-content:space-between;gap:20px;font-family:'Geist',sans-serif;font-size:17px;font-weight:600">How much does it cost?<span style="color:#0B4F6C">+</span></summary>
+      <p style="font-size:15px;line-height:1.65;color:#5F5F5C;margin:14px 0 0;max-width:62ch">Every event is quoted individually — the guest count, the menu and the setup change the number too much for a price list to be honest. Send us the details and you get a written quote within 24 hours.</p>
+    </details>
+    <details style="border-top:1px solid #E8E6E0;padding:22px 0">
+      <summary style="display:flex;justify-content:space-between;gap:20px;font-family:'Geist',sans-serif;font-size:17px;font-weight:600">Do you handle allergies and dietary needs?<span style="color:#0B4F6C">+</span></summary>
+      <p style="font-size:15px;line-height:1.65;color:#5F5F5C;margin:14px 0 0;max-width:62ch">Yes. Gluten-free, nut-free, vegetarian and vegan options are available across the menu. Tell us on the form and we build the table around it.</p>
+    </details>
+    <details style="border-top:1px solid #E8E6E0;padding:22px 0">
+      <summary style="display:flex;justify-content:space-between;gap:20px;font-family:'Geist',sans-serif;font-size:17px;font-weight:600">Where do you deliver?<span style="color:#0B4F6C">+</span></summary>
+      <p style="font-size:15px;line-height:1.65;color:#5F5F5C;margin:14px 0 0;max-width:62ch">Across Texas. Delivery inside the metro area is included; longer distances are quoted with the event.</p>
+    </details>
+    <details style="border-top:1px solid #E8E6E0;border-bottom:1px solid #E8E6E0;padding:22px 0">
+      <summary style="display:flex;justify-content:space-between;gap:20px;font-family:'Geist',sans-serif;font-size:17px;font-weight:600">Do you set up at the venue?<span style="color:#0B4F6C">+</span></summary>
+      <p style="font-size:15px;line-height:1.65;color:#5F5F5C;margin:14px 0 0;max-width:62ch">Yes — styling, stands, linens and pickup are part of the service for full tables. Snack boxes are drop-off only.</p>
+    </details>
+  </div>
+</section>
+
+<section id="quote" style="background:#0B0B0B;color:#fff;padding:104px 24px;position:relative;overflow:hidden">
+  <div style="position:absolute;top:-260px;right:-140px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(63,167,150,0.14),transparent 65%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:start">
+    <div>
+      <p style="font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#3FA796;margin:0 0 18px">Request a quote</p>
+      <h2 style="font-family:'Geist',sans-serif;font-size:clamp(28px,3.6vw,42px);font-weight:600;letter-spacing:-0.02em;line-height:1.1;margin:0 0 18px;max-width:18ch;text-wrap:pretty">Tell us the date. We'll do the rest.</h2>
+      <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.65);margin:0 0 36px;max-width:50ch">Written quote within 24 hours. No deposit until you approve the menu.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px">
+        <a href="https://wa.me/10000000000" style="display:inline-flex;align-items:center;gap:10px;width:fit-content;border:1px solid rgba(255,255,255,0.18);color:#fff;font-size:15px;font-weight:600;padding:13px 20px;border-radius:8px" style-hover="border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05);color:#fff">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.2-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>
+          Chat on WhatsApp
+        </a>
+        <a href="tel:+10000000000" style="display:inline-flex;align-items:center;gap:10px;width:fit-content;color:rgba(255,255,255,0.7);font-size:15px" style-hover="color:#fff">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 3 5a1 1 0 0 1 1-1z"></path></svg>
+          (000) 000-0000
+        </a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:22px;font-size:13px;color:rgba(255,255,255,0.45)">
+        <span>Serving all of Texas</span><span>·</span><span>Licensed &amp; insured kitchen</span>
+      </div>
+    </div>
+    <form onSubmit="{{ onSubmit }}" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:30px;display:grid;gap:16px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px">
+        <label style="display:grid;gap:7px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.7)">Name
+          <input type="text" placeholder="Your name" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:12px 13px;color:#fff;font-family:inherit;font-size:14px;outline:none" style-focus="border-color:#3FA796" />
+        </label>
+        <label style="display:grid;gap:7px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.7)">Email
+          <input type="email" placeholder="you@email.com" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:12px 13px;color:#fff;font-family:inherit;font-size:14px;outline:none" style-focus="border-color:#3FA796" />
+        </label>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px">
+        <label style="display:grid;gap:7px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.7)">Event date
+          <input type="date" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:12px 13px;color:#fff;font-family:inherit;font-size:14px;outline:none;color-scheme:dark" style-focus="border-color:#3FA796" />
+        </label>
+        <label style="display:grid;gap:7px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.7)">Guests
+          <input type="number" placeholder="50" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:12px 13px;color:#fff;font-family:inherit;font-size:14px;outline:none" style-focus="border-color:#3FA796" />
+        </label>
+      </div>
+      <label style="display:grid;gap:7px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.7)">Type of event
+        <select style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:12px 13px;color:#fff;font-family:inherit;font-size:14px;outline:none" style-focus="border-color:#3FA796">
+          <option style="color:#111">Kids' birthday</option>
+          <option style="color:#111">Adult birthday</option>
+          <option style="color:#111">Corporate event</option>
+          <option style="color:#111">Christening / baby shower</option>
+          <option style="color:#111">Wedding</option>
+          <option style="color:#111">Other</option>
+        </select>
+      </label>
+      <label style="display:grid;gap:7px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.7)">Anything we should know
+        <textarea rows="3" placeholder="Venue, colors, allergies, theme…" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:12px 13px;color:#fff;font-family:inherit;font-size:14px;outline:none;resize:vertical" style-focus="border-color:#3FA796"></textarea>
+      </label>
+      <button type="submit" style="background:#fff;color:#0B0B0B;border:none;border-radius:8px;padding:14px 20px;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer" style-hover="background:#F1F1EE">{{ submitLabel }}</button>
+      <p style="font-size:12px;color:rgba(255,255,255,0.4);margin:0;text-align:center">We reply within one business day.</p>
+    </form>
+  </div>
+</section>
+
+<footer style="background:#FAFAF7;border-top:1px solid #E8E6E0;padding:56px 24px 40px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start">
+    <div style="max-width:320px">
+      <img src="https://www.bitesworld.net/airo-assets/images/logo/horizontal" alt="Moon Bites" style="height:32px;width:auto;display:block;margin-bottom:16px" />
+      <p style="font-size:13px;line-height:1.6;color:#5F5F5C;margin:0">Catering and dessert tables for parties, christenings and company events across Texas.</p>
+    </div>
+    <div style="display:flex;gap:56px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#111110;margin:0 0 4px">Explore</p>
+        <a href="#menu" style="font-size:13px;color:#5F5F5C">Menu</a>
+        <a href="#gallery" style="font-size:13px;color:#5F5F5C">Gallery</a>
+        <a href="#process" style="font-size:13px;color:#5F5F5C">How it works</a>
+        <a href="#faq" style="font-size:13px;color:#5F5F5C">FAQ</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#111110;margin:0 0 4px">Contact</p>
+        <a href="#quote" style="font-size:13px;color:#5F5F5C">Request a quote</a>
+        <a href="https://wa.me/10000000000" style="font-size:13px;color:#5F5F5C">WhatsApp</a>
+        <a href="mailto:hello@bitesworld.net" style="font-size:13px;color:#5F5F5C">hello@bitesworld.net</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid #E8E6E0;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:12px;color:#8A8A86">
+    <span>© 2026 Moon Bites. All rights reserved.</span>
+    <span>Texas, USA</span>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      submitLabel: this.state.sent ? "Request sent — we'll be in touch" : "Send request",
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
