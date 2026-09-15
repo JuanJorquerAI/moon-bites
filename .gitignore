@@ -1,1 +1,14 @@
 *.zip
+
+# SO
+.DS_Store
+
+# node (herramientas de desarrollo local, el sitio no depende de npm)
+node_modules/
+npm-debug.log*
+
+# editores / agentes
+.serena/
+.vscode/
+.idea/
+
